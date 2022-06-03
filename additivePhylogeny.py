@@ -3,6 +3,7 @@ import numpy as np
 import math
 import networkx as nx
 import matplotlib.pyplot as plt
+import pylab
 
 G = nx.Graph()
 global showDataBool
@@ -162,5 +163,6 @@ if __name__=='__main__':
             print("Nodes:",G.nodes)
             print("Edges with weights:", get_edge_attributes(G, "weight"))
         nx.draw(G, pos, node_size=500,edge_cmap=plt.cm.Reds,with_labels=True)
+        pylab.show()
     except:
         print("It is not a additive tree")
